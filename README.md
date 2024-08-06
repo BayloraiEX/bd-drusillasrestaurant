@@ -1,6 +1,11 @@
 ## DRUSILLAS VENETIAN RESTAURANT JOB | BD-DRUSILLASRESTAURANT ##
 
 ## INSTALATION ##
+- Start after the [qb] folder
+EAMPLE:
+- ensure [qb]
+- ensure bd-drusillasrestaurant
+  
 # FOR QB #
 - Put the below into your qb-core --> shared --> items.lua
 ```
