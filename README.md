@@ -410,5 +410,5 @@ drusillas = {
 	},
 ```
 
-*FOR QB Bring all images from images folder into qb-inventory --> html --> images*
-*FOR OX Bring all images from images folder into ox_inventory --> web --> images*
+# FOR QB Bring all images from images folder into qb-inventory --> html --> images #
+# FOR OX Bring all images from images folder into ox_inventory --> web --> images #
