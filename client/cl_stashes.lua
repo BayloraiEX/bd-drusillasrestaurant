@@ -157,18 +157,18 @@ elseif Config.TargetSystem == 'qb' then
 				event = "bd-drusillasrestaurant:client:drusillasHeater",
 				icon = "fa-solid fa-temperature-full",
 				label = "Heater",
-				jobs = Config.Jobname,
+				job = Config.Jobname,
 			},
 		},
 		distance = 2.5
 	})
 	-- FRIDGE --
-	exports['qb-target']:AddBoxZone("DrusillasFridge", vector3(-1341.32, -1060.34, 7.36), 0.9, 0.9, {
+	exports['qb-target']:AddBoxZone("DrusillasFridge", vector3(-1343.44, -1061.05, 7.39), 0.9, 0.9, {
 		name = "DrusillasFridge",
 		heading = 347.27,
 		debugPoly = false,
-		minZ = 7.36 - 2,
-		maxZ = 7.36 + 2,
+		minZ = 7.39 - 2,
+		maxZ = 7.39 + 2,
 	}, {
 		options = {
 			{
@@ -176,7 +176,7 @@ elseif Config.TargetSystem == 'qb' then
 				event = "bd-drusillasrestaurant:client:drusillasFridge",
 				icon = "fa-solid fa-temperature-empty",
 				label = "Fridge",
-				jobs = Config.Jobname,
+				job = Config.Jobname,
 			},
 		},
 		distance = 2.5
@@ -195,26 +195,26 @@ elseif Config.TargetSystem == 'qb' then
 				event = "bd-drusillasrestaurant:client:drusillasStorage",
 				icon = "fa-solid fa-boxes-stacked",
 				label = "Storage",
-				jobs = Config.Jobname,
+				job = Config.Jobname,
 			},
 		},
 		distance = 2.5
 	})
 	-- SHOP --
-	exports['qb-target']:AddBoxZone("DrusillasShop", vector3(-1339.69, -1059.19, 7.33), 0.9, 0.9, {
+	exports['qb-target']:AddBoxZone("DrusillasShop", vector3(-1352.12, -1054.22, 3.87), 0.9, 0.9, {
 		name = "DrusillasShop",
 		heading = 347.27,
 		debugPoly = false,
-		minZ = 7.36 - 2,
-		maxZ = 7.36 + 2,
+		minZ = 3.87 - 2,
+		maxZ = 3.87 + 2,
 	}, {
 		options = {
 			{
 				type = "client",
-				event = "bd-drusillasrestaurant:client:ingredientShop",
+				event = "bd-drusillasrestaurant:client:DrusillasShop",
 				icon = "fa-solid fa-basket-shopping",
 				label = "Ingredients",
-				jobs = Config.Jobname,
+				job = Config.Jobname,
 			},
 		},
 		distance = 2.5
@@ -279,7 +279,7 @@ elseif Config.InventorySystem == 'qb' then
         TriggerServerEvent('bd-drusillasrestaurant:server:drusillasStorage')
     end)
 	-- SHOP --
-	RegisterNetEvent('bd-drusillasrestaurant:client:ingredientShop', function()
-		TriggerServerEvent("inventory:server:OpenInventory", "shop", "drusillas", Config.Items)
+	RegisterNetEvent('bd-drusillasrestaurant:client:DrusillasShop', function()
+		TriggerServerEvent('bd-drusillasrestaurant:server:drusillasShop')
 	end)
 end

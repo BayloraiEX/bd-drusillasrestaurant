@@ -49,8 +49,8 @@ if Config.TargetSystem == 'ox' then
 		}
 	})
 elseif Config.TargetSystem == 'qb' then
-    exports['qb-target']:AddBoxZone("drusillasClock", vector3(-1348.52, -1065.13, 7.42), 0.9, 0.9, {
-        name = "drusillas_clock",
+    exports['qb-target']:AddBoxZone("DrusillasClock", vector3(-1348.52, -1065.13, 7.42), 0.9, 0.9, {
+        name = "DrusillasClock",
         heading = 347.27,
         debugPoly = false,
         minZ = 7.42 - 2,
@@ -68,8 +68,8 @@ elseif Config.TargetSystem == 'qb' then
         distance = 2.5
     })
     -- CREATING REGISTER TARGET FOR --
-    exports['qb-target']:AddBoxZone("drusillasRegister", vector3(-1346.16, -1065.58, 7.37), 0.9, 0.9, {
-        name = "drusillas_register",
+    exports['qb-target']:AddBoxZone("DrusillasRegister", vector3(-1346.16, -1065.58, 7.37), 0.9, 0.9, {
+        name = "DrusillasRegister",
         heading = 131.31,
         debugPoly = false,
         minZ = 7.37 - 2,

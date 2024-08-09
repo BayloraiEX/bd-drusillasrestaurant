@@ -99,19 +99,20 @@ elseif Config.InventorySystem == 'qb' then
         end
     end)
     -- SHOP --
-    RegisterNetEvent('bd-drusillasrestaurant:server:ingredientShop', function(name)
+    RegisterNetEvent('bd-drusillasrestaurant:server:drusillasShop', function(name)
         local src = source
         local Player = QBCore.Functions.GetPlayer(src)
         local playerCoords = GetEntityCoords(playerPed)
         exports['qb-inventory']:CreateShop({
-            name = 'ingredientShop',
+            name = 'drusillasShop',
             label = 'Drusillas Shop',
+            coords = vector3(-1352.12, -1054.22, 3.87), -- Match where the target is on client side
             slots = 20,
             items = Config.Items
         })
     
         if Player then
-            exports['qb-inventory']:OpenShop(source, 'ingredientShop')
+            exports['qb-inventory']:OpenShop(source, 'drusillasShop')
         end
     end)
 end

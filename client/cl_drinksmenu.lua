@@ -9,7 +9,7 @@ if Config.TargetSystem == 'ox' then
         options = {
           {
             name = 'hornys_drinks',
-            event = 'bd-drusillasrestaurant:client:openDrinkMenu',
+            event = 'bd-drusillasrestaurant:client:OpenDrinkMenu',
             icon = 'fa-solid fa-faucet-drip',
             label = 'Drink Menu',
             groups = {
@@ -26,7 +26,7 @@ if Config.TargetSystem == 'ox' then
         options = {
           {
             name = 'hornys_drinks',
-            event = 'bd-drusillasrestaurant:client:openCoffeeMenu',
+            event = 'bd-drusillasrestaurant:client:OpenCoffeeMenu',
             icon = 'fa-solid fa-mug-hot',
             label = 'Hot Drinks',
             groups = {
@@ -37,17 +37,17 @@ if Config.TargetSystem == 'ox' then
       })
 elseif Config.TargetSystem == 'qb' then
   -- DRINK TARGET --
-    exports['qb-target']:AddBoxZone("DrusillasDrinkMenu", vector3(-1345.37, -1062.1, 7.39), 0.9, 0.9, {
+    exports['qb-target']:AddBoxZone("DrusillasDrinkMenu", vector3(-1345.15, -1062.55, 7.39), 0.9, 0.9, {
         name = "DrusillasDrinkMenu",
         heading = 347.27,
         debugPoly = false,
-        minZ = 7.39,
-        maxZ = 7.39,
+        minZ = 7.39 - 2,
+        maxZ = 7.39 + 2,
       }, {
         options = {
           {
             type = "client",
-            event = "bd-drusillasrestaurant:client:openDrinkMenu",
+            event = "bd-drusillasrestaurant:client:OpenDrinkMenu",
             icon = "fa-solid fa-faucet-drip",
             label = "Drink Menu",
             job = Config.Jobname,
@@ -56,17 +56,17 @@ elseif Config.TargetSystem == 'qb' then
         distance = 2.5
       })
       -- COFFEE TARGET --
-      exports['qb-target']:AddBoxZone("DrusillasCoffeeMenu", vector3(-1345.37, -1062.1, 7.39), 0.9, 0.9, {
+      exports['qb-target']:AddBoxZone("DrusillasCoffeeMenu", vector3(-1346.78, -1062.88, 7.4), 0.9, 0.9, {
         name = "DrusillasCoffeeMenu",
         heading = 347.27,
         debugPoly = false,
-        minZ = 7.39,
-        maxZ = 7.39,
+        minZ = 7.4 - 2,
+        maxZ = 7.4 + 2,
       }, {
         options = {
           {
             type = "client",
-            event = "bd-drusillasrestaurant:client:openCoffeeMenu",
+            event = "bd-drusillasrestaurant:client:OpenCoffeeMenu",
             icon = "fa-solid fa-mug-hot",
             label = "Hot Drinks",
             job = Config.Jobname,
@@ -96,7 +96,7 @@ lib.registerContext({
         },
     }
 })
-RegisterNetEvent('bd-drusillasrestaurant:client:openDrinkMenu', function()
+RegisterNetEvent('bd-drusillasrestaurant:client:OpenDrinkMenu', function()
     lib.showContext('drusillas_drink_menu')
 end)
 -- ALCOHOL --
@@ -624,7 +624,7 @@ lib.registerContext({
     },
   }
 })
-RegisterNetEvent('bd-drusillasrestaurant:client:openCoffeeMenu', function()
+RegisterNetEvent('bd-drusillasrestaurant:client:OpenCoffeeMenu', function()
   lib.showContext('drusillas_hot_drinks')
 end)
 RegisterNetEvent('bd-drusillasrestaurant:client:makeCoffee', function()
