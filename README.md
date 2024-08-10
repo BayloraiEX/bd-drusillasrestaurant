@@ -72,6 +72,50 @@ drusillas = {
 	},
 ```
 
+- Put the below into your qb-smallresources --> config.lua
+```
+eat = {
+        -- Drusillas Food Items --
+        ['dr_3meat_pizza'] = math.random(90, 100),
+        ['dr_bbqchicken_pizza'] = math.random(90, 100),
+        ['dr_cheese_bread'] = math.random(50, 75),
+        ['dr_cheese_pizza'] = math.random(90, 100),
+        ['dr_chicken_alfredo'] = math.random(90, 100),
+        ['dr_fries'] = math.random(30, 60),
+        ['dr_garlicbread'] = math.random(40, 70),
+        ['dr_jalepeno_pepperoni_pizza'] = math.random(90, 100),
+        ['dr_lasagna'] = math.random(90, 100),
+        ['dr_pineapple_pizza'] = math.random(90, 100),
+        ['dr_spaghetti'] = math.random(90, 100),
+        ['dr_tomato_soup'] = math.random(90, 100),
+        ['dr_vegeterian_pizza'] = math.random(90, 100),
+    },
+drink = {
+        -- Drusillas Soft Drinks --
+        ['dr_ecola'] = math.random(50, 75),
+        ['dr_orangotang'] = math.random(50, 75),
+        ['dr_sprunk'] = math.random(50, 75),
+        ['dr_water'] = math.random(50, 75),
+        ['dr_coffee'] = math.random(50, 75),
+    },
+alcohol = {
+        -- Drusillas Alcohol Drinks --
+        ['dr_ambeer'] = math.random(25, 50),
+        ['dr_blarneys'] = math.random(25, 50),
+        ['dr_chenekov'] = math.random(25, 50),
+        ['dr_dusche'] = math.random(25, 50),
+        ['dr_logger'] = math.random(25, 50),
+        ['dr_nogo'] = math.random(25, 50),
+        ['dr_pisswser'] = math.random(25, 50),
+        ['dr_pisswaser1'] = math.random(25, 50),
+        ['dr_pisswaser2'] = math.random(25, 50),
+        ['dr_pridebrew'] = math.random(25, 50),
+        ['dr_rockfordhill'] = math.random(25, 50),
+        ['dr_stronzo'] = math.random(25, 50),
+        ['dr_vinewood'] = math.random(25, 50),
+    },
+```
+
 # FOR OX_INVENTORY #
 - Put the below into your ox_inventory --> data --> items.lua
 ```
